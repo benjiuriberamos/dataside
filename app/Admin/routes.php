@@ -11,5 +11,6 @@ Route::group([
     'as' => config('admin.route.prefix').'.',
 ], function (Router $router) {
     $router->get('/', 'HomeController@index')->name('home');
-    $router->resource('demo/users', UserController::class);
+    //$router->resource('demo/users', UserController::class);
+    $router->resource('products', ProductController::class);
 });

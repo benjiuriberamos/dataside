@@ -17,14 +17,15 @@ class HomeController extends Controller
         return $content
             ->header('Dataside')
             ->title('Dataside')
-            ->description('Coorporación')
+            ->description('Corporación')
             ->breadcrumb(
                 ['text' => 'Dashboard', 'url' => '/admin'],
                 // ['text' => 'User management', 'url' => '/admin/users'],
                 // ['text' => 'Edit user'],
             )
             ->body('El administrador contiene una serie de módulos que permitiran ayudar
-            a agregar, modificar contenido a las webs.')
+            a agregar, modificar contenido a las webs. A continuación podra identificar una serie de caracteristicas
+            requeridas para el funcionamiento de este gestor de contenido.')
             ->row(MyDashboard::title())
             ->row(function (Row $row) {
 

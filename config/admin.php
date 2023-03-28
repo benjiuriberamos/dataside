@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Benjadev</b> admin',
+    'logo' => '<b>Benjadev</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -408,7 +408,4 @@ return [
 
     ],
 
-    'Dashboard' => [
-        'title' => 'Benjamin'
-    ],
 ];

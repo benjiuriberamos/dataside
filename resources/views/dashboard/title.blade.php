@@ -26,7 +26,7 @@
 </style>
 
 <div class="title">
-    Bebesitaaaa
+    Dataside
 </div>
 <div class="links">
     <a href="https://github.com/z-song/laravel-admin" target="_blank">Github</a>
