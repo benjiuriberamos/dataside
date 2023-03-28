@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controller\Front\FrontController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', '');
+Route::get('/', 'Front\FrontController@index');

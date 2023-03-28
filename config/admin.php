@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Benjadev',
+    'name' => 'Dataside',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>Benjadev</b>',
+    'logo' => '<b>Dataside</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>La</b>',
+    'logo-mini' => '<b>DS</b>',
 
     /*
     |--------------------------------------------------------------------------
