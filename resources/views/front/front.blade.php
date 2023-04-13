@@ -7,9 +7,12 @@
     <div class="container">
         <div class="hero-inner">
             <div class="hero-copy">
-                <h1 class="hero-title mt-0">Landing template for startups</h1>
-                <p class="hero-paragraph">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
-                <div class="hero-cta"><a class="button button-primary" href="#">Pre order now</a><a class="button" href="#">Get in touch</a></div>
+                <h1 class="hero-title mt-0">Dataside</h1>
+                <p class="hero-paragraph">Dataside es una coorporación orientada al soporte computacional de técnología de punta.</p>
+                <div class="hero-cta">
+                    <a class="button button-primary" href="#products-section">Ver productos</a>
+                    <a class="button" href="#" href="#contact-section">Contáctanos</a>
+                </div>
             </div>
             <div class="hero-figure anime-element">
                 <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
@@ -30,70 +33,27 @@
     </div>
 </section>
 
-<section class="features section">
+<section class="features section" id="products-section">
     <div class="container">
         <div class="features-inner section-inner has-bottom-divider">
             <div class="features-wrap">
+                @foreach ($productos as $producto)
                 <div class="feature text-center is-revealing">
                     <div class="feature-inner">
                         <div class="feature-icon">
-                            <img src="{{ asset('assets/solid/dist') }}/images/feature-icon-01.svg" alt="Feature 01">
+                            <img src="{{ asset('storage'). '/' . $producto->image }}" alt="{{ $producto->title }}">
                         </div>
-                        <h4 class="feature-title mt-24">Be Productive</h4>
-                        <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                        <h4 class="feature-title mt-24">{{ $producto->title }}</h4>
+                        <p class="text-sm mb-0">{{ $producto->descripcion }}</p>
                     </div>
                 </div>
-                <div class="feature text-center is-revealing">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="{{ asset('assets/solid/dist') }}/images/feature-icon-02.svg" alt="Feature 02">
-                        </div>
-                        <h4 class="feature-title mt-24">Be Productive</h4>
-                        <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                    </div>
-                </div>
-                <div class="feature text-center is-revealing">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="{{ asset('assets/solid/dist') }}/images/feature-icon-03.svg" alt="Feature 03">
-                        </div>
-                        <h4 class="feature-title mt-24">Be Productive</h4>
-                        <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                    </div>
-                </div>
-                <div class="feature text-center is-revealing">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="{{ asset('assets/solid/dist') }}/images/feature-icon-04.svg" alt="Feature 04">
-                        </div>
-                        <h4 class="feature-title mt-24">Be Productive</h4>
-                        <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                    </div>
-                </div>
-                <div class="feature text-center is-revealing">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="{{ asset('assets/solid/dist') }}/images/feature-icon-05.svg" alt="Feature 05">
-                        </div>
-                        <h4 class="feature-title mt-24">Be Productive</h4>
-                        <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                    </div>
-                </div>
-                <div class="feature text-center is-revealing">
-                    <div class="feature-inner">
-                        <div class="feature-icon">
-                            <img src="{{ asset('assets/solid/dist') }}/images/feature-icon-06.svg" alt="Feature 06">
-                        </div>
-                        <h4 class="feature-title mt-24">Be Productive</h4>
-                        <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </section>
 
-<section class="pricing section">
+{{-- <section class="pricing section">
     <div class="container-sm">
         <div class="pricing-inner section-inner">
             <div class="pricing-header text-center">
@@ -131,15 +91,20 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
-<section class="ctacontent section">
+<section class="ctacontent section" id="contact-section">
     <div class="container">
-        <div class="cta-inner section-inner">
-            <h3 class="section-title mt-0">Still not convinced on buying?</h3>
-            <div class="cta-cta">
-                <a class="button button-primary button-wide-mobile" href="#">Get in touch</a>
-            </div>
+        <div class="section-inner">
+        {{-- <div class="cta-inner section-inner"> --}}
+            <h3 class="section-title mt-0">¿Deseas comunicarte con nosotros?</h3>
+            <br>
+            <p>Teléfono: 955 775 880</p>
+            <br>
+            <p>Correo: benjiuriberamos@gmail.com</p>
+            {{-- <div class="cta-cta">
+                <a class="button button-primary button-wide-mobile" href="#"></a>
+            </div> --}}
         </div>
     </div>
 </section>
